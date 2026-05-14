@@ -1,0 +1,21 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "server",
+  "compatibility_date": "2025-09-27",
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    "directory": "."
+  },
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  // Add D1 binding here
+  "d1_databases": [
+    {
+      "binding": "BINDING1",       // this is the env variable your worker code uses
+      "database_name": "database"    // this is your D1 database name
+    }
+  ]
+}
